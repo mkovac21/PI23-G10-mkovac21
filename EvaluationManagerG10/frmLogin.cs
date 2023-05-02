@@ -12,6 +12,8 @@ namespace EvaluationManagerG10
 {
     public partial class frmLogin : Form
     {
+        string username = "nastavnik";
+        string password = "test";
         public frmLogin()
         {
             InitializeComponent();
@@ -23,6 +25,12 @@ namespace EvaluationManagerG10
 
         private void label1_Click(object sender, EventArgs e) {
 
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e) {
+            if (txtUsername.Text == "") {
+                MessageBox.Show("Korisničko ime nije uneseno!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
